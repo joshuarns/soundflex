@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soundflex - Acoustic Comfort</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Manrope:wght@200;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "primary-fixed": "#e9e1dd",
+                        "surface-dim": "#ddd9d8",
+                        "surface-container-low": "#f7f3f1",
+                        "on-secondary-container": "#636564",
+                        "secondary-fixed-dim": "#c6c7c6",
+                        "background": "#f5f5f7",
+                        "inverse-primary": "#ccc5c2",
+                        "surface-tint": "#625d5b",
+                        "tertiary": "#000000",
+                        "surface": "#fdf8f7",
+                        "on-primary-container": "#888380",
+                        "on-primary-fixed-variant": "#4a4643",
+                        "surface-container": "#f1edec",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#ece7e6",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#e6e1e0",
+                        "tertiary-container": "#1a1c1c",
+                        "outline-variant": "#d0c4be",
+                        "primary-container": "#1e1b19",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#fdf8f7",
+                        "error-container": "#ffdad6",
+                        "secondary": "#5d5f5e",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e6e1e0",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-tertiary-container": "#838484",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#1e1b19",
+                        "outline": "#7e7570",
+                        "on-surface-variant": "#4d4540",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#ccc5c2",
+                        "on-surface": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#e2e2e2",
+                        "inverse-surface": "#313030",
+                        // Brand Accents
+                        "brand-purple": "#8A2BE2",
+                        "brand-magenta": "#FF00FF",
+                        "brand-orange": "#FFA500",
+                        "brand-yellow": "#FFFF00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "16px",
+                        "unit": "8px",
+                        "stack-md": "32px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-padding": "48px",
+                        "stack-lg": "64px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Manrope"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "200" }],
+                        "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glow-active {
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.15); /* Purple glow */
+        }
+        .vibrancy-line {
+            position: relative;
+        }
+        .vibrancy-line::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, #8A2BE2, #FF00FF); /* Purple to Magenta */
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: right;
+        }
+        .vibrancy-line:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #8A2BE2, #FF00FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .soft-blur-bg {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,165,0,0.05) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface-container/80 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-container-padding max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center" href="#">
+<img alt="SoundFlex Logo" class="h-10 md:h-12 w-auto object-contain" src="img/Soundflex-logo.png"/>
+</a>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Acoustics</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Process</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Specs</a>
+</div>
+<div>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-tertiary-container transition-colors duration-300 vibrancy-line" href="#">Inquire</a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 md:pt-48 md:pb-32 px-margin-mobile md:px-container-padding min-h-screen flex items-center">
+<div class="soft-blur-bg top-0 left-0"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center relative z-10">
+<div class="space-y-stack-md">
+<h1 class="font-display-xl text-[48px] md:text-display-xl text-primary leading-tight">
+                    Acoustic comfort, <br/><span class="gradient-text">designed</span> for modern spaces.
+                </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+                    High-performance PET acoustic panels that improve sound, define atmosphere, and integrate seamlessly into architecture.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider vibrancy-line" href="#applications">Explore Applications</a>
+<a class="inline-flex items-center justify-center px-8 py-4 border border-outline text-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-container transition-colors duration-300" href="#technology">View Technology</a>
+</div>
+</div>
+<div class="relative h-[500px] md:h-[700px] w-full rounded-xl overflow-hidden border border-outline-variant bg-surface-container-low">
+<img alt="Soundflex Installation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugdbso7UzyO8sNNQ8JrgBUUNHT7J9Nsf5rsLsWSqOmSaaByVvYCNLEqA9eWWKnxT4VG8AXFW9_AMgBQ8euJbK-n361rxlLOci1YLUm-iIfkEBAxR9iOtO7UCrJtQjycYd6VEZuq0hzWlYOXGQ7LRQVuTLSp6lSHeljR4Ud0P0cRL0VPF2MEmt5tO1piyQ3wN-zZTDNOzLzfyT0cfBk0kLhlY2AnCcOtEc4dUJj2H6oGLl2MfjaHohR9Hg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Product Value Section -->
+<section class="py-24 bg-surface-container-lowest px-margin-mobile md:px-container-padding relative">
+<div class="soft-blur-bg bottom-0 right-0" style="background: radial-gradient(circle, rgba(138,43,226,0.05) 0%, rgba(255,255,255,0) 70%);"></div>
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Value 1 -->
+<div class="p-stack-md bg-surface border border-outline-variant hover:border-brand-purple transition-colors duration-300 group">
+<div class="mb-6 inline-flex p-3 bg-surface-container-low rounded-full text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined">graphic_eq</span>
+</div>
+<h3 class="font-headline-lg-mobile md:text-headline-lg text-primary mb-4">Acoustic Performance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Engineered to absorb mid-to-high frequencies, dramatically reducing reverberation and creating focused, quiet environments.</p>
+</div>
+<!-- Value 2 -->
+<div class="p-stack-md bg-surface border border-outline-variant hover:border-brand-magenta transition-colors duration-300 group">
+<div class="mb-6 inline-flex p-3 bg-surface-container-low rounded-full text-brand-magenta group-hover:bg-brand-magenta group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<h3 class="font-headline-lg-mobile md:text-headline-lg text-primary mb-4">Architectural Integration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Minimalist profiles and precise cuts allow panels to blend into walls, ceilings, and custom millwork seamlessly.</p>
+</div>
+<!-- Value 3 -->
+<div class="p-stack-md bg-surface border border-outline-variant hover:border-brand-orange transition-colors duration-300 group">
+<div class="mb-6 inline-flex p-3 bg-surface-container-low rounded-full text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<h3 class="font-headline-lg-mobile md:text-headline-lg text-primary mb-4">Sustainable PET</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Constructed from up to 60% recycled post-consumer plastics, offering a durable and environmentally responsible acoustic solution.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Applications Grid -->
+<section class="py-24 bg-surface px-margin-mobile md:px-container-padding" id="applications">
+<div class="max-w-7xl mx-auto">
+<div class="mb-stack-lg text-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-brand-purple mb-2 block">Environments</span>
+<h2 class="font-display-xl text-[40px] md:text-display-xl text-primary">Designed for focus.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low h-[600px]">
+<img alt="Office Acoustic Application" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ujGPJAa-whT00W8-VeW82Ks14iPj-bOd53DOH2bxABWQ3WomZ75FpP53YbuCuxIAJpDdgXo8pyPObt-tTKR7A1blRrCEz8TXWZ0mEDkWz6ikv7GHPJ8Q2KiExldTMRLpqeTXb-s0AQqq2xKN-ZST0-L3AVE4YX_8L1X6n4k9bgcuorI-wbNeh3bMD3-IDmSb8sX8YGGSiSQAc9_B3wHNyvOlScYJ9jgfc14-b6RX8EpNjniskAPQdX0bQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-stack-md">
+<h3 class="font-headline-lg text-white mb-2">Corporate Workspaces</h3>
+<p class="font-body-md text-body-md text-white/80">Mitigate open-office noise and enhance privacy in meeting rooms.</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low h-[600px]">
+<img alt="Hospitality Acoustic Application" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ugpToAUpQR-bHltjPKRl9972L1uIG8XYu3RXWRA3WUyclYFZr6-Ef5vXvHrfF8lKXIiTUNhIHX8eN-W7juWs_leFzYlmxOFoT1F64sup6IuEVxOkrqjQ2l7qgbt3V19tcyX0hj5bcGpC1i8qCituq4NJtL6gRfSfPI4u1VpTz5k_pQMk5YA9PQA8NFP7TPyNXw42t0Cr_vh2uidcmqgxrKAEnGUiQYzv5fIhLiGft3ybKKhp6S1jdloq9I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-stack-md">
+<h3 class="font-headline-lg text-white mb-2">Hospitality &amp; Dining</h3>
+<p class="font-body-md text-body-md text-white/80">Control ambient noise to create intimate, conversational dining experiences.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technology/Precision -->
+<section class="py-24 bg-surface-container-lowest px-margin-mobile md:px-container-padding border-t border-outline-variant relative" id="technology">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="relative h-[600px] w-full rounded-xl overflow-hidden border border-outline-variant">
+<img alt="Acoustic Panel Detail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujTV4R67r--RWCRo6EsTzag5d_aifgdH-fx89OHgqUxi1DnbEWsy4I2RbHiXTBtgHF_7YohLmKn1fQNRws7BB4-Z_tv5Z1_lzOlJOEPb1pgyIKPzp8H1W7IucXar1FevljWZEYiSOsz_p5n-fR9ma1041jyGbc2dFd90ExV4mJXOX3sxw2rJhr4GedUb1wZbtbvH8QUaCIAYY8QzaBLWcN1_mGV_9phH19qEN6gIbXsOsrY3RABjNlh1XA"/>
+</div>
+<div class="space-y-stack-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-brand-magenta mb-2 block">Material Science</span>
+<h2 class="font-display-xl text-[40px] md:text-display-xl text-primary leading-tight">Precision in every fiber.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Our panels undergo a rigorous manufacturing process to ensure consistent density and structural integrity. The micro-perforated surface maximizes sound wave absorption while maintaining a smooth, monolithic appearance suitable for high-end interiors.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-purple"></span>
+<span class="font-body-md text-body-md text-on-surface">NRC rating of up to 0.85</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-magenta"></span>
+<span class="font-body-md text-body-md text-on-surface">Fire retardant (Class A ASTM E84)</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+<span class="font-body-md text-body-md text-on-surface">Zero VOC emissions</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 bg-primary text-center px-margin-mobile md:px-container-padding relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-purple via-transparent to-transparent"></div>
+<div class="max-w-3xl mx-auto relative z-10 space-y-stack-md">
+<h2 class="font-display-xl text-[40px] md:text-display-xl text-white">Design quieter, more comfortable spaces.</h2>
+<p class="font-body-md text-body-md text-surface-dim">Connect with our acoustics team to discuss your next project or request a sample kit.</p>
+<div class="mt-8">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-container transition-colors duration-300" href="#">Request Consultation</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-lowest flex flex-col md:flex-row justify-between items-center py-stack-lg px-container-padding gap-stack-sm w-full">
+<div class="flex items-center gap-4 mb-4 md:mb-0">
+<img alt="SoundFlex Logo" class="h-10 md:h-12 w-auto object-contain" src="img/Soundflex-logo.png"/>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-secondary-container hover:text-tertiary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-secondary-container hover:text-tertiary transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-secondary-container hover:text-tertiary transition-colors duration-200" href="#">Installation Guide</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-secondary-container hover:text-tertiary transition-colors duration-200" href="#">Sustainability</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface dark:text-on-surface mt-4 md:mt-0 text-center md:text-right">
+            © 2024 Soundflex Architectural Acoustics. All rights reserved.
+        </div>
+</footer>
+</body></html>
