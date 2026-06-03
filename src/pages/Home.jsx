@@ -93,7 +93,7 @@ export default function Home() {
             <h2 className="section-title">Designed for focus.</h2>
           </div>
           <div className="apps-grid">
-            <div className="app-card app-card--tall">
+            <div className="app-card">
               <img src={img21} alt="Corporate Workspaces" />
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Corporate Workspaces</h3>
@@ -102,7 +102,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="app-card app-card--tall">
+            <div className="app-card">
               <img src={img22} alt="Hospitality & Dining" />
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Hospitality &amp; Dining</h3>

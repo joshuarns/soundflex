@@ -366,13 +366,11 @@ a { text-decoration: none; color: inherit; }
   border-radius: 8px;
   border: 1px solid var(--outline-variant);
   background: var(--surface-container-low);
-  height: 280px;
+  height: 340px;
 }
-.app-card--tall { height: 340px; }
 @media (min-width: 768px) {
   .apps-grid { grid-template-columns: 1fr 1fr; }
-  .app-card { height: 400px; }
-  .app-card--tall { height: 600px; }
+  .app-card { height: 600px; }
 }
 .app-card img {
   width: 100%;
