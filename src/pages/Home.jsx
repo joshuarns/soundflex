@@ -1,3 +1,12 @@
+import img11 from '../assets/SoundFlex_1.1.jpg'
+import img12 from '../assets/SoundFlex_1.2.jpg'
+import img21 from '../assets/SoundFlex_2.1.jpg'
+import img22 from '../assets/SoundFlex_2.2.jpg'
+import img31 from '../assets/SoundFlex_3.1.jpg'
+import img32 from '../assets/SoundFlex_3.2.jpg'
+import img41 from '../assets/SoundFlex_4.1.jpg'
+import img42 from '../assets/SoundFlex_4.2.jpg'
+
 export default function Home() {
   return (
     <>
@@ -24,10 +33,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero__image">
-            <img
-              src="https://lh3.googleusercontent.com/aida/ADBb0ugdbso7UzyO8sNNQ8JrgBUUNHT7J9Nsf5rsLsWSqOmSaaByVvYCNLEqA9eWWKnxT4VG8AXFW9_AMgBQ8euJbK-n361rxlLOci1YLUm-iIfkEBAxR9iOtO7UCrJtQjycYd6VEZuq0hzWlYOXGQ7LRQVuTLSp6lSHeljR4Ud0P0cRL0VPF2MEmt5tO1piyQ3wN-zZTDNOzLzfyT0cfBk0kLhlY2AnCcOtEc4dUJj2H6oGLl2MfjaHohR9Hg"
-              alt="Soundflex Installation"
-            />
+            <img src={img11} alt="Soundflex Installation" />
             <div className="hero__image-overlay" />
           </div>
         </div>
@@ -87,11 +93,8 @@ export default function Home() {
             <h2 className="section-title">Designed for focus.</h2>
           </div>
           <div className="apps-grid">
-            <div className="app-card">
-              <img
-                src="https://lh3.googleusercontent.com/aida/ADBb0ujGPJAa-whT00W8-VeW82Ks14iPj-bOd53DOH2bxABWQ3WomZ75FpP53YbuCuxIAJpDdgXo8pyPObt-tTKR7A1blRrCEz8TXWZ0mEDkWz6ikv7GHPJ8Q2KiExldTMRLpqeTXb-s0AQqq2xKN-ZST0-L3AVE4YX_8L1X6n4k9bgcuorI-wbNeh3bMD3-IDmSb8sX8YGGSiSQAc9_B3wHNyvOlScYJ9jgfc14-b6RX8EpNjniskAPQdX0bQ"
-                alt="Office Acoustic Application"
-              />
+            <div className="app-card app-card--tall">
+              <img src={img21} alt="Corporate Workspaces" />
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Corporate Workspaces</h3>
                 <p className="app-card__desc">
@@ -99,15 +102,30 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="app-card">
-              <img
-                src="https://lh3.googleusercontent.com/aida/ADBb0ugpToAUpQR-bHltjPKRl9972L1uIG8XYu3RXWRA3WUyclYFZr6-Ef5vXvHrfF8lKXIiTUNhIHX8eN-W7juWs_leFzYlmxOFoT1F64sup6IuEVxOkrqjQ2l7qgbt3V19tcyX0hj5bcGpC1i8qCituq4NJtL6gRfSfPI4u1VpTz5k_pQMk5YA9PQA8NFP7TPyNXw42t0Cr_vh2uidcmqgxrKAEnGUiQYzv5fIhLiGft3ybKKhp6S1jdloq9I"
-                alt="Hospitality Acoustic Application"
-              />
+            <div className="app-card app-card--tall">
+              <img src={img22} alt="Hospitality & Dining" />
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Hospitality &amp; Dining</h3>
                 <p className="app-card__desc">
                   Control ambient noise to create intimate, conversational dining experiences.
+                </p>
+              </div>
+            </div>
+            <div className="app-card">
+              <img src={img12} alt="Education Spaces" />
+              <div className="app-card__overlay">
+                <h3 className="app-card__title">Education Spaces</h3>
+                <p className="app-card__desc">
+                  Improve speech intelligibility in classrooms and lecture halls.
+                </p>
+              </div>
+            </div>
+            <div className="app-card">
+              <img src={img32} alt="Residential Interiors" />
+              <div className="app-card__overlay">
+                <h3 className="app-card__title">Residential Interiors</h3>
+                <p className="app-card__desc">
+                  Bring acoustic comfort to home studios, living rooms, and open-plan spaces.
                 </p>
               </div>
             </div>
@@ -119,10 +137,7 @@ export default function Home() {
       <section className="technology" id="technology">
         <div className="container tech__inner">
           <div className="tech__image">
-            <img
-              src="https://lh3.googleusercontent.com/aida/ADBb0ujTV4R67r--RWCRo6EsTzag5d_aifgdH-fx89OHgqUxi1DnbEWsy4I2RbHiXTBtgHF_7YohLmKn1fQNRws7BB4-Z_tv5Z1_lzOlJOEPb1pgyIKPzp8H1W7IucXar1FevljWZEYiSOsz_p5n-fR9ma1041jyGbc2dFd90ExV4mJXOX3sxw2rJhr4GedUb1wZbtbvH8QUaCIAYY8QzaBLWcN1_mGV_9phH19qEN6gIbXsOsrY3RABjNlh1XA"
-              alt="Acoustic Panel Detail"
-            />
+            <img src={img31} alt="Acoustic Panel Detail" />
           </div>
           <div className="tech__content">
             <span className="section-label section-label--magenta">Material Science</span>
@@ -148,6 +163,16 @@ export default function Home() {
               </li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Gallery Strip */}
+      <section className="gallery-strip">
+        <div className="gallery-strip__item">
+          <img src={img41} alt="Soundflex Detail 1" />
+        </div>
+        <div className="gallery-strip__item">
+          <img src={img42} alt="Soundflex Detail 2" />
         </div>
       </section>
 
