@@ -18,7 +18,7 @@ export default function Nav() {
           <Link to="/">Home</Link>
           <Link to="/applications">Applications</Link>
           <a href="#colors">Colors</a>
-          <a href="#specs">Specs</a>
+          <Link to="/specs">Specs</Link>
         </div>
 
         <div className="nav__actions">
@@ -34,7 +34,7 @@ export default function Nav() {
         <Link to="/" onClick={close}>Home</Link>
         <Link to="/applications" onClick={close}>Applications</Link>
         <a href="#colors" onClick={close}>Colors</a>
-        <a href="#specs" onClick={close}>Specs</a>
+        <Link to="/specs" onClick={close}>Specs</Link>
         <Link to="/contact" className="nav__drawer-cta label" onClick={close}>Contact</Link>
       </div>
     </nav>
