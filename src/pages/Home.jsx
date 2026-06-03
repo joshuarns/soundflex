@@ -94,7 +94,7 @@ export default function Home() {
           </div>
           <div className="apps-grid">
             <div className="app-card">
-              <img src={img21} alt="Corporate Workspaces" />
+              <img src={img22} alt="Corporate Workspaces" />
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Corporate Workspaces</h3>
                 <p className="app-card__desc">
@@ -102,8 +102,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="app-card">
-              <img src={img22} alt="Hospitality & Dining" />
+            <div className="app-card app-card--empty">
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Hospitality &amp; Dining</h3>
                 <p className="app-card__desc">
@@ -111,8 +110,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="app-card">
-              <img src={img12} alt="Education Spaces" />
+            <div className="app-card app-card--empty">
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Education Spaces</h3>
                 <p className="app-card__desc">
@@ -120,8 +118,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="app-card">
-              <img src={img32} alt="Residential Interiors" />
+            <div className="app-card app-card--empty">
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Residential Interiors</h3>
                 <p className="app-card__desc">
