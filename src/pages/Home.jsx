@@ -33,7 +33,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero__image">
-            <img src={img11} alt="Soundflex Installation" />
+            <img src={img42} alt="Soundflex Installation" />
             <div className="hero__image-overlay" />
           </div>
         </div>
@@ -102,7 +102,8 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="app-card app-card--empty">
+            <div className="app-card">
+              <img src={img41} alt="Hospitality & Dining" />
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Hospitality &amp; Dining</h3>
                 <p className="app-card__desc">
@@ -110,7 +111,8 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="app-card app-card--empty">
+            <div className="app-card">
+              <img src={img11} alt="Education Spaces" />
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Education Spaces</h3>
                 <p className="app-card__desc">
@@ -134,7 +136,7 @@ export default function Home() {
       <section className="technology" id="technology">
         <div className="container tech__inner">
           <div className="tech__image">
-            <img src={img31} alt="Acoustic Panel Detail" />
+            <img src={img12} alt="Acoustic Panel Detail" />
           </div>
           <div className="tech__content">
             <span className="section-label section-label--magenta">Material Science</span>
@@ -166,10 +168,10 @@ export default function Home() {
       {/* Gallery Strip */}
       <section className="gallery-strip">
         <div className="gallery-strip__item">
-          <img src={img41} alt="Soundflex Detail 1" />
+          <img src={img31} alt="Soundflex Detail 1" />
         </div>
         <div className="gallery-strip__item">
-          <img src={img42} alt="Soundflex Detail 2" />
+          <img src={img32} alt="Soundflex Detail 2" />
         </div>
       </section>
 
