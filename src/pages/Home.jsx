@@ -6,6 +6,8 @@ import img31 from '../assets/SoundFlex_3.1.jpg'
 import img32 from '../assets/SoundFlex_3.2.jpg'
 import img41 from '../assets/SoundFlex_4.1.jpg'
 import img42 from '../assets/SoundFlex_4.2.jpg'
+import imgEdu from '../assets/SoundFlex_Education.jpg'
+import imgRes from '../assets/SoundFlex_Residential.jpg'
 
 export default function Home() {
   return (
@@ -112,7 +114,7 @@ export default function Home() {
               </div>
             </div>
             <div className="app-card">
-              <img src={img11} alt="Education Spaces" />
+              <img src={imgEdu} alt="Education Spaces" />
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Education Spaces</h3>
                 <p className="app-card__desc">
@@ -120,7 +122,8 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="app-card app-card--empty">
+            <div className="app-card">
+              <img src={imgRes} alt="Residential Interiors" />
               <div className="app-card__overlay">
                 <h3 className="app-card__title">Residential Interiors</h3>
                 <p className="app-card__desc">
