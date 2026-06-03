@@ -573,3 +573,135 @@ a { text-decoration: none; color: inherit; }
   .footer__logo img { height: 48px; }
   .footer__copy { text-align: right; }
 }
+
+/* ============================================================
+   APPLICATIONS PAGE
+   ============================================================ */
+.app-banner {
+  position: relative;
+  height: 85vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.app-banner__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.app-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%);
+}
+.app-banner__content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 56px;
+}
+.app-banner__title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .app-banner__title { font-size: 80px; }
+}
+
+/* Product Cards — Apple style */
+.app-products {
+  padding: 80px 0 100px;
+  background: var(--background);
+}
+.app-products__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .app-products__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Card */
+.apc {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--surface-container-lowest);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.apc:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.10);
+}
+
+/* Image area */
+.apc__img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.apc__img {
+  height: 440px;
+  background: #111;
+  transition: transform 0.6s var(--ease);
+}
+.apc:hover .apc__img {
+  transform: scale(1.03);
+}
+.apc__tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+/* Body */
+.apc__body {
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.apc__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+}
+.apc__desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--on-surface-variant);
+}
+.apc__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-family: var(--font-label);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  font-weight: 500;
+  transition: gap 0.2s ease, opacity 0.2s ease;
+}
+.apc__link:hover {
+  gap: 10px;
+  opacity: 0.7;
+}
