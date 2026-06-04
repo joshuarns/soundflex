@@ -796,21 +796,28 @@ a { text-decoration: none; color: inherit; }
   font-weight: 300;
 }
 
-/* Image placeholder */
-.specs-img-placeholder {
-  height: 320px;
-  background: var(--surface-container);
-  border: 1px dashed var(--outline-variant);
+/* Specs images */
+.specs-intro__img {
+  width: 100%;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  height: 320px;
+  display: block;
 }
-.specs-img-placeholder--tall { height: 480px; }
-.specs-img-placeholder__label {
-  color: var(--outline);
-  font-size: 11px;
-  letter-spacing: 0.08em;
+@media (min-width: 768px) {
+  .specs-intro__img { height: 400px; }
+}
+
+.specs-img--tall {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 320px;
+  display: block;
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .specs-img--tall { height: 480px; }
 }
 
 /* Generic section */

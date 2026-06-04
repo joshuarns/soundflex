@@ -1,4 +1,7 @@
 import img11 from '../assets/SoundFlex_1.1.jpg'
+import specs1 from '../assets/Specs_1.jpg'
+import specs2 from '../assets/Specs_2.jpg'
+import specs3 from '../assets/Specs_3.jpg'
 
 const specs = [
   { label: 'Material',       value: 'Recycled PET Polyester Fiber' },
@@ -63,10 +66,7 @@ export default function Specs() {
             recycled PET fibers, this panel helps reduce echo and reverberation, creating
             quieter, more comfortable, and productive environments.
           </p>
-          {/* Image placeholder */}
-          <div className="specs-img-placeholder">
-            <span className="specs-img-placeholder__label label">Image coming soon</span>
-          </div>
+          <img src={specs1} alt="SoundFlex acoustic panel" className="specs-intro__img" />
         </div>
       </section>
 
@@ -101,20 +101,14 @@ export default function Specs() {
               ))}
             </ul>
           </div>
-          {/* Image placeholder */}
-          <div className="specs-img-placeholder specs-img-placeholder--tall">
-            <span className="specs-img-placeholder__label label">Image coming soon</span>
-          </div>
+          <img src={specs2} alt="SoundFlex key benefits" className="specs-img--tall" />
         </div>
       </section>
 
       {/* Acoustic Performance */}
       <section className="specs-section specs-section--alt">
         <div className="container specs-performance__inner">
-          {/* Image placeholder */}
-          <div className="specs-img-placeholder specs-img-placeholder--tall">
-            <span className="specs-img-placeholder__label label">Image coming soon</span>
-          </div>
+          <img src={specs3} alt="SoundFlex acoustic performance" className="specs-img--tall" />
           <div className="specs-performance__content">
             <span className="section-label">Acoustic Performance</span>
             <h2 className="specs-section__title">Precision in every fiber.</h2>
