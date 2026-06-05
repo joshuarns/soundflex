@@ -17,7 +17,7 @@ export default function Nav() {
         <div className="nav__links">
           <Link to="/">Home</Link>
           <Link to="/applications">Applications</Link>
-          <a href="#colors">Colors</a>
+          <Link to="/colors">Colors</Link>
           <Link to="/specs">Specs</Link>
         </div>
 
