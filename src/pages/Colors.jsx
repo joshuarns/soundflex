@@ -1,56 +1,75 @@
 import { Link } from 'react-router-dom'
 import img21 from '../assets/SoundFlex_2.1.jpg'
 
+import c1  from '../assets/colors/1.jpg'
+import c2  from '../assets/colors/2.jpg'
+import c3  from '../assets/colors/3.jpg'
+import c4  from '../assets/colors/4.jpg'
+import c5  from '../assets/colors/5.jpg'
+import c6  from '../assets/colors/6.jpg'
+import c7  from '../assets/colors/7.jpg'
+import c8  from '../assets/colors/8.jpg'
+import c9  from '../assets/colors/9.jpg'
+import c10 from '../assets/colors/10.jpg'
+import c11 from '../assets/colors/11.jpg'
+import c12 from '../assets/colors/12.jpg'
+import c13 from '../assets/colors/13.jpg'
+import c14 from '../assets/colors/14.jpg'
+import c15 from '../assets/colors/15.jpg'
+import c16 from '../assets/colors/16.jpg'
+import c17 from '../assets/colors/17.jpg'
+import c18 from '../assets/colors/18.jpg'
+import c19 from '../assets/colors/19.jpg'
+import c20 from '../assets/colors/20.jpg'
+import c21 from '../assets/colors/21.jpg'
+
 const palette = [
   {
     collection: 'Neutrals',
     desc: 'Timeless tones that integrate effortlessly into any interior, from minimalist to classic.',
     colors: [
-      { name: 'White Sand',  hex: '#F5F0EB' },
-      { name: 'Warm Grey',   hex: '#C8C0B8' },
-      { name: 'Concrete',    hex: '#9E9890' },
-      { name: 'Charcoal',    hex: '#4A4845' },
-      { name: 'Midnight',    hex: '#1C1B1A' },
+      { name: 'White Sand',  img: c1  },
+      { name: 'Warm Grey',   img: c2  },
+      { name: 'Concrete',    img: c3  },
+      { name: 'Stone',       img: c4  },
+      { name: 'Charcoal',    img: c5  },
+      { name: 'Midnight',    img: c6  },
     ],
   },
   {
     collection: 'Warm Tones',
     desc: 'Earthy, inviting hues that add warmth and texture to hospitality and residential spaces.',
     colors: [
-      { name: 'Linen',       hex: '#EDE0D0' },
-      { name: 'Camel',       hex: '#C4966A' },
-      { name: 'Terracotta',  hex: '#B5604A' },
-      { name: 'Rust',        hex: '#8C3A2A' },
+      { name: 'Linen',       img: c7  },
+      { name: 'Camel',       img: c8  },
+      { name: 'Terracotta',  img: c9  },
+      { name: 'Rust',        img: c10 },
+      { name: 'Sienna',      img: c11 },
     ],
   },
   {
     collection: 'Cool Tones',
     desc: 'Calm, focused palettes ideal for corporate, educational, and healthcare environments.',
     colors: [
-      { name: 'Powder',      hex: '#D6E4EC' },
-      { name: 'Sage',        hex: '#8FA89A' },
-      { name: 'Slate Blue',  hex: '#5C7A8C' },
-      { name: 'Storm',       hex: '#3A5260' },
+      { name: 'Powder',      img: c12 },
+      { name: 'Sage',        img: c13 },
+      { name: 'Slate Blue',  img: c14 },
+      { name: 'Storm',       img: c15 },
+      { name: 'Dusk',        img: c16 },
     ],
   },
   {
     collection: 'Bold',
     desc: 'Statement colors for designers looking to make acoustics part of the visual identity.',
     colors: [
-      { name: 'Oat',         hex: '#D4C5A9' },
-      { name: 'Forest',      hex: '#2D4A38' },
-      { name: 'Navy',        hex: '#1E2D45' },
-      { name: 'Graphite',    hex: '#2E2E2E' },
+      { name: 'Oat',         img: c17 },
+      { name: 'Forest',      img: c18 },
+      { name: 'Navy',        img: c19 },
+      { name: 'Graphite',    img: c20 },
+      { name: 'Obsidian',    img: c21 },
     ],
   },
 ]
-
-function isDark(hex) {
-  const r = parseInt(hex.slice(1, 3), 16)
-  const g = parseInt(hex.slice(3, 5), 16)
-  const b = parseInt(hex.slice(5, 7), 16)
-  return (r * 299 + g * 587 + b * 114) / 1000 < 128
-}
 
 export default function Colors() {
   return (
@@ -84,7 +103,6 @@ export default function Colors() {
               fade-resistant results across every installation.
             </p>
           </div>
-          {/* Placeholder */}
           <div className="colors-intro__placeholder">
             <span className="specs-img-placeholder__label label">Image coming soon</span>
           </div>
@@ -98,28 +116,23 @@ export default function Colors() {
           className={`colors-collection ${i % 2 !== 0 ? 'colors-collection--alt' : ''}`}
         >
           <div className="container colors-collection__inner">
-            {/* Text side */}
             <div className="colors-collection__info">
               <span className="section-label">{group.collection}</span>
               <h3 className="colors-collection__title">{group.collection}</h3>
               <p className="colors-collection__desc">{group.desc}</p>
 
-              {/* Swatches */}
               <div className="swatches">
                 {group.colors.map((c) => (
                   <div className="swatch" key={c.name}>
-                    <div
-                      className="swatch__chip"
-                      style={{ background: c.hex }}
-                    />
+                    <div className="swatch__chip">
+                      <img src={c.img} alt={c.name} />
+                    </div>
                     <span className="swatch__name label">{c.name}</span>
-                    <span className="swatch__hex">{c.hex}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Image placeholder */}
             <div className="colors-collection__img-placeholder">
               <span className="specs-img-placeholder__label label">Image coming soon</span>
             </div>
