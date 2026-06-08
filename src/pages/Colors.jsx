@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import img21 from '../assets/SoundFlex_2.1.jpg'
-import imgNeutrals  from '../assets/SoundFlex_1.2.jpg'
-import imgWarm      from '../assets/SoundFlex_4.1.jpg'
-import imgCool      from '../assets/SoundFlex_2.1.jpg'
-import imgBold      from '../assets/Specs_3.jpg'
+import imgNeutrals  from '../assets/neutrals-tones.jpg'
+import imgWarm      from '../assets/warm-tones.jpg'
+import imgCool      from '../assets/cool-tones.jpg'
+import imgBold      from '../assets/vibrant-tones.jpg'
 import imgIntro     from '../assets/Specs_2.jpg'
 import imgCustom    from '../assets/SoundFlex_3.2.jpg'
 
