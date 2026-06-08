@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import img21 from '../assets/SoundFlex_2.1.jpg'
+import imgBanner from '../assets/banner-colors.jpg'
 import imgNeutrals  from '../assets/neutrals-tones.jpg'
 import imgWarm      from '../assets/warm-tones.jpg'
 import imgCool      from '../assets/cool-tones.jpg'
@@ -86,7 +86,7 @@ export default function Colors() {
     <>
       {/* Banner */}
       <section className="app-banner">
-        <img src={img21} alt="Colors" className="app-banner__img" />
+        <img src={imgBanner} alt="Colors" className="app-banner__img" />
         <div className="app-banner__overlay" />
         <div className="app-banner__content container">
           <h1 className="app-banner__title">Color as a<br />design tool.</h1>
