@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom'
 import img21 from '../assets/SoundFlex_2.1.jpg'
+import imgNeutrals  from '../assets/SoundFlex_1.2.jpg'
+import imgWarm      from '../assets/SoundFlex_4.1.jpg'
+import imgCool      from '../assets/SoundFlex_2.1.jpg'
+import imgBold      from '../assets/Specs_3.jpg'
+import imgIntro     from '../assets/Specs_2.jpg'
+import imgCustom    from '../assets/SoundFlex_3.2.jpg'
 
 import c1  from '../assets/colors/1.jpg'
 import c2  from '../assets/colors/2.jpg'
@@ -26,47 +32,51 @@ import c21 from '../assets/colors/21.jpg'
 const palette = [
   {
     collection: 'Neutrals',
+    img: imgNeutrals,
     desc: 'Timeless tones that integrate effortlessly into any interior, from minimalist to classic.',
     colors: [
-      { name: 'White Sand',  img: c1  },
-      { name: 'Warm Grey',   img: c2  },
-      { name: 'Concrete',    img: c3  },
-      { name: 'Stone',       img: c4  },
-      { name: 'Charcoal',    img: c5  },
-      { name: 'Midnight',    img: c6  },
+      { name: 'White',     img: c19 },
+      { name: 'Silver',    img: c5  },
+      { name: 'Graphite',  img: c15 },
+      { name: 'Slate',     img: c4  },
+      { name: 'Espresso',  img: c6  },
     ],
   },
   {
     collection: 'Warm Tones',
+    img: imgWarm,
     desc: 'Earthy, inviting hues that add warmth and texture to hospitality and residential spaces.',
     colors: [
-      { name: 'Linen',       img: c7  },
-      { name: 'Camel',       img: c8  },
-      { name: 'Terracotta',  img: c9  },
-      { name: 'Rust',        img: c10 },
-      { name: 'Sienna',      img: c11 },
+      { name: 'Blush',      img: c7  },
+      { name: 'Peach',      img: c3  },
+      { name: 'Mocha',      img: c8  },
+      { name: 'Mustard',    img: c18 },
+      { name: 'Tangerine',  img: c21 },
     ],
   },
   {
-    collection: 'Cool Tones',
-    desc: 'Calm, focused palettes ideal for corporate, educational, and healthcare environments.',
+    collection: 'Cool & Earth',
+    img: imgCool,
+    desc: 'Calm, grounded palettes ideal for corporate, educational, and biophilic design environments.',
     colors: [
-      { name: 'Powder',      img: c12 },
-      { name: 'Sage',        img: c13 },
-      { name: 'Slate Blue',  img: c14 },
-      { name: 'Storm',       img: c15 },
-      { name: 'Dusk',        img: c16 },
+      { name: 'Sage',      img: c16 },
+      { name: 'Meadow',    img: c10 },
+      { name: 'Teal',      img: c13 },
+      { name: 'Seafoam',   img: c17 },
+      { name: 'Forest',    img: c12 },
     ],
   },
   {
-    collection: 'Bold',
+    collection: 'Bold & Vibrant',
+    img: imgBold,
     desc: 'Statement colors for designers looking to make acoustics part of the visual identity.',
     colors: [
-      { name: 'Oat',         img: c17 },
-      { name: 'Forest',      img: c18 },
-      { name: 'Navy',        img: c19 },
-      { name: 'Graphite',    img: c20 },
-      { name: 'Obsidian',    img: c21 },
+      { name: 'Dusty Rose', img: c1  },
+      { name: 'Lilac',      img: c2  },
+      { name: 'Fuchsia',    img: c14 },
+      { name: 'Coral',      img: c9  },
+      { name: 'Lime',       img: c11 },
+      { name: 'Indigo',     img: c20 },
     ],
   },
 ]
@@ -104,7 +114,7 @@ export default function Colors() {
             </p>
           </div>
           <div className="colors-intro__placeholder">
-            <span className="specs-img-placeholder__label label">Image coming soon</span>
+            <img src={imgIntro} alt="SoundFlex acoustic panel" />
           </div>
         </div>
       </section>
@@ -134,7 +144,7 @@ export default function Colors() {
             </div>
 
             <div className="colors-collection__img-placeholder">
-              <span className="specs-img-placeholder__label label">Image coming soon</span>
+              <img src={group.img} alt={group.collection} />
             </div>
           </div>
         </section>
@@ -144,7 +154,7 @@ export default function Colors() {
       <section className="colors-custom">
         <div className="container colors-custom__inner">
           <div className="colors-custom__placeholder">
-            <span className="specs-img-placeholder__label label">Image coming soon</span>
+            <img src={imgCustom} alt="Custom colors" />
           </div>
           <div className="colors-custom__content">
             <span className="section-label section-label--magenta">Custom Colors</span>

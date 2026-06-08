@@ -1027,12 +1027,13 @@ a { text-decoration: none; color: inherit; }
 }
 .colors-intro__placeholder {
   height: 480px;
-  background: var(--surface-container);
-  border: 1px dashed var(--outline-variant);
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+}
+.colors-intro__placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Collection sections */
@@ -1068,12 +1069,13 @@ a { text-decoration: none; color: inherit; }
 }
 .colors-collection__img-placeholder {
   height: 420px;
-  background: var(--surface-container);
-  border: 1px dashed var(--outline-variant);
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+}
+.colors-collection__img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Swatches */
@@ -1130,14 +1132,14 @@ a { text-decoration: none; color: inherit; }
 }
 .colors-custom__placeholder {
   height: 480px;
-  background: rgba(255,255,255,0.05);
-  border: 1px dashed rgba(255,255,255,0.2);
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
-.colors-custom__placeholder .specs-img-placeholder__label { color: rgba(255,255,255,0.3); }
+.colors-custom__placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .colors-custom__content {
   display: flex;
   flex-direction: column;
